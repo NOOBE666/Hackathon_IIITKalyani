@@ -203,3 +203,37 @@
         width: 100%;
     }
 }
+@media (max-width: 991px) {
+  .contact {
+    padding: 50px;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .container .contactInfo {
+    margin-bottom: 40px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    max-width: 90%;
+  }
+  .wrapper > h1 {
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+  .accordion {
+    font-size: 1rem;
+    padding: 1.5rem 2rem;
+  }
+  .pannel {
+    padding: 0 1.5rem 2rem 1.5rem;
+  }
+  .contactForm {
+    width: 80%;
+    padding: 20px;
+  }
+}
+

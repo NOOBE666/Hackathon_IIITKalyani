@@ -176,3 +176,33 @@ p{
     margin-left: 2%;
     margin-right: 2%;
 }
+@media screen and (max-width: 768px) {
+  /* Styles for mobile devices */
+
+  .navigation {
+    height: auto; /* Adjust height for mobile */
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .wrap {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align links to the left */
+  }
+
+  .links a {
+    margin-right: 0; /* Remove horizontal spacing */
+    margin-bottom: 1rem; /* Add vertical spacing */
+  }
+
+  .dashboard {
+    padding: 2rem; /* Adjust padding for smaller screens */
+    flex-direction: column; /* Stack tracking and picture sections */
+  }
+
+  .tracking, .picture {
+    width: 100%; /* Make sections full width */
+    margin-bottom: 2rem; /* Add spacing between sections */
+  }
+
+  /* Add more styles for mobile layout as needed */
+}

@@ -126,3 +126,62 @@ input:focus{
     cursor: pointer;
     transition: 1s;
 }
+@media (max-width: 991px) {
+    .navigation {
+      padding-left: 2%;
+      padding-right: 2%;
+      height: auto;
+    }
+    .links {
+      flex-direction: column;
+      padding-top: 0;
+    }
+    .wrap {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    a {
+      margin-right: 0;
+      margin-bottom: 1em;
+    }
+    .container {
+      width: auto;
+      margin-top: 1em;
+    }
+    .directions {
+      width: 100%;
+      height: auto;
+      position: relative;
+      padding-top: 2em;
+    }
+    .location,
+    .destination {
+      margin-top: 5%;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .navigation {
+      padding-left: 1%;
+      padding-right: 1%;
+    }
+    .wrap {
+      padding-top: 1%;
+    }
+    a {
+      font-size: small;
+    }
+    .location,
+    .destination {
+      height: 2em;
+    }
+    input {
+      height: 80%;
+    }
+    .btn {
+      height: 2.5em;
+      width: 4em;
+      margin-top: 3%;
+    }
+  }
+  
