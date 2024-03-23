@@ -46,7 +46,7 @@ a:hover::after{
     transform: scaleX(1);
 transform-origin: left;
 }
-.container{
+.container_main{
     width: 8em;
     height: 2em;
     display: flex;
@@ -55,7 +55,7 @@ transform-origin: left;
     border-radius: 10px;
     cursor: pointer;
 }
-.container:hover{
+.container_main:hover{
     background-color: rgb(61, 61, 59);
     color: rgb(240, 240, 28);
     transition: 1s;
@@ -109,7 +109,7 @@ input:focus{
     outline: none;
     font-size: medium;
 }
-.btn{
+.btn_main{
     margin-top: 5%;
     /* margin-left: 30%; */
     height: 3em;
@@ -117,7 +117,7 @@ input:focus{
     border-radius: 10px;
     border: 0px;
 }
-.btn:hover{
+.btn_main:hover{
     color: white;
     background-color: black;
     border: 1px solid white;

@@ -1,4 +1,4 @@
-var openBtn = document.querySelector('.open_form')
+var openBtn = document.querySelector('.signup_main')
 var main = document.querySelector('.main')
 var btns = document.querySelectorAll('.btn button')
 var signInBtn = document.querySelector('.sign_in')

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/CSS/Home.css">
+    <link rel="stylesheet" href="/CSS/signin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
@@ -17,8 +18,8 @@
             <div class="business"><a href="">Business</a></div>
             <div class="about"><a href="/HTML/about.html">About</a></div>
         </nav>
-        <div class="container">
-        <div class="signup">Signup/Signin</div></div>
+        <div class="container_main">
+        <div class="signup_main">Signup/Signin</div></div>
         </div>
     </div>
     <div class="dashboard">
@@ -33,7 +34,7 @@
                 <i class="fa-solid fa-location-dot"></i>
                 <input type="text" placeholder="Destination">
             </div>
-            <button class="btn">Submit</button>
+            <button class="btn_main">Submit</button>
         </div>
         <div class="picture">
             <img src="/Pictures/young-man-city-bus-stop-generative-ai.jpg" alt="">
@@ -61,5 +62,79 @@
             <div class="no"><i class="fa-brands fa-twitter"></i></div>
         </div>
     </footer>
+    <div class="main">
+        <div class="wrapper">
+            <h2>Sign in to ride</h2>
+            <i class="fas fa-times cross"></i>
+
+            <div class="container">
+                <div class="form_container">
+                    <div class="btn">
+                        <button class="sign_in active">Sign In</button>
+                        <button class="sign_up">Sign Up</button>
+                    </div>
+
+                    <form action="#" class="form sign_in_form">
+                        <div class="input_container">
+                            <input type="email" name="" id="" placeholder="Enter phone number or email" required>
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+
+                        <div class="input_container">
+                            <input type="password" name="" id="" placeholder="Password" class="pass" required>
+                            <i class="fas fa-lock"></i>
+                            <i class="fas fa-eye eye"></i>
+                        </div>
+
+                        <div class="remember">
+                            <div class="checkBox">
+                                <input type="checkbox" name="" id="">
+                                <span class="rememberTxt">Remember me</span>
+                            </div>
+                            <a href="#" class="text">Forgot Password</a>
+                        </div>
+
+                        <button>Sign In</button>
+                    </form>
+
+                    <form action="#" class="form sign_up_form">
+                        <div class="input_container">
+                            <input type="email" name="" id="" placeholder="Enter phone number" required>
+                              <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="input_container">
+                            <input type="email" name="" id="" placeholder="Enter Email" required>
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+
+                        <div class="input_container">
+                            <input type="password" name="" id="" placeholder="Password" class="pass1" required>
+                            <i class="fas fa-lock"></i>
+                            <i class="fas fa-eye eye eye1"></i>
+                        </div>
+                        <div class="input_container">
+                            <input type="password" name="" id="" placeholder="Confirm Password" class="pass1" required>
+                            <i class="fas fa-lock"></i>
+                            <i class="fas fa-eye eye eye1"></i>
+                        </div>
+
+
+                        <div class="remember">
+                            <div class="checkBox">
+                                <input type="checkbox" name="" id="">
+                                <span class="rememberTxt">Remember me</span>
+                            </div>
+                            <a href="#" class="text">Forgot Password</a>
+                        </div>
+
+                        <button>Sign Up</button>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/javascript/location.js"></script>
+    <script src="/javascript/signin.js"></script>
 </body>
 </html>

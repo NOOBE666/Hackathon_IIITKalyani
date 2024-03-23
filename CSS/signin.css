@@ -4,14 +4,14 @@
     box-sizing: border-box;
 }
 
-body{
+/* body{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-color: aliceblue;
     font-family: 'Poppins', sans-serif;
-}
+} */
 
 .open_form{
     position: relative;
@@ -230,7 +230,7 @@ a{
 
 a:hover{
     color: rgb(15, 157, 88);
-    text-decoration: underline;
+    /* text-decoration: underline; */
     cursor: pointer;
 }
 .checkBox {
