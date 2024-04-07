@@ -1,0 +1,18 @@
+{
+  "name": "gobus",
+  "version": "1.0.0",
+  "description": "full stack project for buses",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "BIT THEORY",
+  "license": "ISC",
+  "dependencies": {
+    "@googlemaps/js-api-loader": "^1.16.6",
+    "express": "^4.19.2",
+    "nodemailer": "^6.9.13"
+  }
+}
