@@ -2,6 +2,8 @@ import express from "express";
 import path from "path";
 import PageController from "./src/controller/page.js";
 const server=express();
+server.set('view engine','ejs');
+server.set('views',path.join(path.resolve(), 'src', 'views','HTML'))
 server.use(express.static(path.join('src','views')));
 server.use(express.static(path.join('src','public')));
 server.use(express.static(path.join('src','controller')));
