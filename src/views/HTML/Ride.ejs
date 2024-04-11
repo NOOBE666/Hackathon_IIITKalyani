@@ -24,19 +24,17 @@
     <div class="directions">
         <div class="location">
             <i class="fa-solid fa-location-crosshairs"></i>
-            <input type="text" placeholder="Enter Location">
+            <input type="text" placeholder="Enter Location" id="from" required>
         </div>
         <div class="destination">
             <i class="fa-solid fa-location-dot"></i>
-            <input type="text" placeholder="Destination">
+            <input type="text" placeholder="Destination" id="to" required>
         </div>
-        <button class="btn">Submit</button>
+        <button class="btn" onclick="calcRoute()">Submit</button>
     </div>
     <div class="map" id="map"></div>
     </div>
-    <script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaWiHEsLoJykNoW7oL7vb5itQE-JPBLgk&loading=async&callback=initMap">
-</script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaWiHEsLoJykNoW7oL7vb5itQE-JPBLgk&libraries=places"></script>
     <script src="/google_api.js"></script>
 </body>
 </html>
