@@ -9,4 +9,5 @@ let pages=new PageController();
 server.get('/',pages.homerender)
 server.get('/Ride',pages.riderender)
 server.get('/About',pages.aboutrender)
-export default server;
+export default server; 
+
