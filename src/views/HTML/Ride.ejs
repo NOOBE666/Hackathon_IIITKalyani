@@ -14,14 +14,14 @@
             <div class="home"><a href="/">Home</a></div>
             <div class="ride"><a href="/Ride">Ride</a></div>
             <div class="business"><a href="">Business</a></div>
-            <div class="about"><a href="/HTML/about.html">About</a></div>
+            <div class="about"><a href="/About">About</a></div>
         </nav>
         <div class="container">
         <div class="signup">Signup/Signin</div></div>
         </div>
     </div>
     <div class="view">
-    <div class="directions">
+    <div class="directions" id="directions">
         <div class="location">
             <i class="fa-solid fa-location-crosshairs"></i>
             <input type="text" placeholder="Enter Location" id="from" required>
@@ -30,9 +30,16 @@
             <i class="fa-solid fa-location-dot"></i>
             <input type="text" placeholder="Destination" id="to" required>
         </div>
-        <button class="btn" onclick="calcRoute()">Submit</button>
+        <button class="btn" onclick="calcRoute()" id="btn">Submit</button>
     </div>
     <div class="map" id="map"></div>
+    <%if(list){%>
+    <div class="listofbuses">
+        <%list.forEach((item)=>{%>
+            <div><%=item.busName%></div>
+            <%})%>
+    </div>
+    <%}%>
     </div>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaWiHEsLoJykNoW7oL7vb5itQE-JPBLgk&libraries=places"></script>
     <script src="/google_api.js"></script>

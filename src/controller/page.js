@@ -9,7 +9,7 @@ export default class PageController{
     }
     riderender(req,res){
         // res.sendFile(path.join(path.resolve(),'src','views','HTML','Ride.html'));
-        res.render('Ride');
+        res.render('Ride',{list:null});
     }
     aboutrender(req,res){
         // res.sendFile(path.join(path.resolve(),'src','views','HTML','about.html'));
