@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/Ride.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="navigation">
+        <h2>GoBus</h2>
+        <div class="wrap">
+        <nav class="links">
+            <div class="home"><a href="/">Home</a></div>
+            <div class="ride"><a href="/Ride">Ride</a></div>
+            <div class="business"><a href="">Business</a></div>
+            <div class="about"><a href="/About">About</a></div>
+        </nav>
+        <div class="container">
+        <div class="signup">Signup/Signin</div></div>
+        </div>
+    </div>
+    <div class="view">
+    <div class="directions" id="directions">
+        <div class="location">
+            <i class="fa-solid fa-location-crosshairs"></i>
+            <input type="text" placeholder="Enter Location" id="from" required>
+        </div>
+        <div class="destination">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" placeholder="Destination" id="to" required>
+        </div>
+        <button class="btn" onclick="calcRoute()" id="btn">Submit</button>
+    </div>
+    <div class="map" id="map"></div>
+    <%if(list){%>
+    <div class="listofbuses">
+        <%list.forEach((item)=>{%>
+            <div><%=item.busName%></div>
+            <%})%>
+    </div>
+    <%}%>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaWiHEsLoJykNoW7oL7vb5itQE-JPBLgk&libraries=places"></script>
+    <script src="/google_api.js"></script>
+</body>
+</html>
