@@ -1,4 +1,5 @@
 import express from "express";
+import { configDotenv } from "dotenv";
 import path from "path";
 import PageController from "./src/controller/page.js";
 const server=express();
@@ -8,6 +9,7 @@ server.use(express.urlencoded({extended:false}));
 server.use(express.static(path.join('src','views')));
 server.use(express.static(path.join('src','public')));
 server.use(express.static(path.join('src','controller')));
+configDotenv();
 let pages=new PageController();
 server.get('/',pages.homerender)
 server.get('/Ride',pages.riderender)

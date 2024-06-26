@@ -1,5 +1,6 @@
 //Using express to create the server
 import server from "./index.js";
+import {connecttoDB} from "./src/models/db.js";
 // const express=require('express');
 // const mail=require('./mailsender')
 // const server=express();
@@ -8,4 +9,5 @@ import server from "./index.js";
 //server listening
 server.listen(5502,()=>{
     console.log('Server is listening at 5502');
+    connecttoDB();
 });
