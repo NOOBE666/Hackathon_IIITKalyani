@@ -15,6 +15,8 @@ server.get('/',pages.homerender)
 server.get('/Ride',pages.riderender)
 server.get('/Business',pages.business)
 server.get('/About',pages.aboutrender)
+
 server.post('/signin',pages.signin)
 server.post('/signup',pages.signup)
 export default server;
+
