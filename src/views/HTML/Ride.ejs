@@ -17,7 +17,12 @@
             <div class="about"><a href="/About">About</a></div>
         </nav>
         <div class="container">
-        <div class="signup">Signup/Signin</div></div>
+        <% if(!token){ %>
+        <div class="signup" >Signup/Signin</div>
+        <% }else{ %>
+            <div class="signup" >Signout</div>
+            <% } %>
+    </div>
         </div>
     </div>
     <div class="view">

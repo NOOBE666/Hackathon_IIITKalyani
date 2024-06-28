@@ -1,8 +1,10 @@
 import path from 'path';
 import jwt from 'jsonwebtoken'
 import ProductModel from '../models/user-model.js';
+import { jwt_validator } from './jwt_validator.js';
 const productmodelobj=new ProductModel()
 var error;
+var present=false;
 export default class PageController{
     homerender(req,res){
         // res.sendFile(path.join(path.resolve(),'src','views','HTML','Home.html'));
@@ -10,7 +12,7 @@ export default class PageController{
     }
     riderender(req,res){
         // res.sendFile(path.join(path.resolve(),'src','views','HTML','Ride.html'));
-        res.render('Ride',{list:null,api_key:process.env.GOOGLE_MAPS_API});
+        res.render('Ride',{list:null,api_key:process.env.GOOGLE_MAPS_API,token:present});
     }
     aboutrender(req,res){
         // res.sendFile(path.join(path.resolve(),'src','views','HTML','about.html'));
@@ -53,6 +55,7 @@ export default class PageController{
           )
           res.cookie('jwtToken',token);
           }
+          present=jwt_validator
           res.redirect('/');
         } catch (error) {
           console.error(error);
