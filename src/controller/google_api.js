@@ -12,6 +12,12 @@ var map=new google.maps.Map(map_doc,Mapoptions);
 var directionsService = new google.maps.DirectionsService();
 var directionsDisplay = new google.maps.DirectionsRenderer();
 directionsDisplay.setMap(map);
+// var marker=new google.maps.Marker({
+//   map:map,
+//   icon:{url:'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vectorstock.com%2Froyalty-free-vector%2Fmap-pointer-icon-vector-13483734&psig=AOvVaw3PpViDDSIZWYRN-K3qC22G&ust=1721092198807000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOiS9pvup4cDFQAAAAAdAAAAABAJ',
+//     scaledSize: new google.maps.Size(50, 50)
+//   }
+// })
 
 function calcRoute() {
   var start;
