@@ -15,11 +15,21 @@ node server
 
 The server side is created for both Business and average user but modification is needed in the future
 
+## Plans for the future
 
+- Complete the backend for the website
+- Make a card for the travel to make it easier for users to travel
+- Livelocation traking is needed to be completed
+
+## Open Source Community
+
+For whoever wants to contribute to this project, it can be ideas, code, or give us feedback on the design or funtionalities are welcome. Contact anyone of us for the above mentioned reason. 
+
+Thank You.
 
 ## Contributers
 
 - [**Suvodeep Khan**](https://github.com/NOOBE666)
-- [**Anindita Asha**](https://github.com/Anindita2004)
+- [**Anindita Saha**](https://github.com/Anindita2004)
 - [**Abhinandan Ghosh**](https://github.com/AbhinandanCodes)
 - [**Arko Ghosh**](https://github.com/AbhinandanCodes)
