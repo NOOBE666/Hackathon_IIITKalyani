@@ -9,7 +9,7 @@ Book tickets anytime, anywhere .No more waiting in lines!! Search, compare, and 
 ```
 node server
 ```
-
+[](src/public/Pictures/2024-07-16%2002-26-03.mov)
 
 The server side is created for both Business and average user but modification is needed in the future
 
