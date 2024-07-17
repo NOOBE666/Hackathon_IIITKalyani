@@ -21,7 +21,7 @@
         <% if(!locals.jwtToken){ %>
         <div class="signup" >Signup/Signin</div>
         <% }else{ %>
-            <div class="signup" >Signout</div>
+            <div class="signup" onclick="removecookies()">Signout</div>
             <% } %>
     </div>
         </div>

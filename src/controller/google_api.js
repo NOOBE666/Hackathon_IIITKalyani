@@ -75,3 +75,6 @@ function driverlocation(map){
     icon:customIcon
   })
 }
+function removecookies() {
+  document.cookie.jwtToken='';
+}

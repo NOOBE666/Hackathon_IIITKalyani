@@ -1,6 +1,7 @@
 import express from "express";
 // import expressEjsLayouts from "express-ejs-layouts";
 import cors from 'cors';
+import { router } from "./src/controller/routes.js";
 import { jwt_validator } from "./src/controller/jwt_validator.js";
 import { configDotenv } from "dotenv";
 import cookieParser from "cookie-parser";
@@ -9,6 +10,7 @@ import PageController from "./src/controller/page.js";
 const server=express();
 server.set('view engine','ejs');
 server.set('views',path.join(path.resolve(), 'src', 'views','HTML'))
+server.use('/Business',router);
 // server.use(expressEjsLayouts)
 server.use(express.urlencoded({extended:false}));
 server.use(express.static(path.join('src','views')));
