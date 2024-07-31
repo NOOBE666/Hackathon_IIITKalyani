@@ -1,31 +1,29 @@
-import path from 'path';
 import jwt from 'jsonwebtoken'
 import ProductModel from '../models/user-model.js';
 const productmodelobj=new ProductModel()
 var error;
 export default class PageController{
     homerender(req,res){
-        // res.sendFile(path.join(path.resolve(),'src','views','HTML','Home.html'));
-        res.render('Home',{errormsg:error});
+        res.render('Home',{errormsg:error,CSS:"/CSS/Home.css"});
     }
-    riderender(req,res){
-        // res.sendFile(path.join(path.resolve(),'src','views','HTML','Ride.html'));
-        res.render('Ride',{list:null,api_key:process.env.GOOGLE_MAPS_API});
+    async riderender(req,res){
+        
+        res.render('Ride',{list:null,api_key:process.env.GOOGLE_MAPS_API,CSS:"/CSS/Ride.css",errormsg:error});
     }
     aboutrender(req,res){
-        // res.sendFile(path.join(path.resolve(),'src','views','HTML','about.html'));
         res.render('about');
     }
     business(req,res){
         res.render('business');
     }
     async signup(req, res) {
+      // console.log(req.body)
         const user=await productmodelobj.addUser(req.body);
         if(user){
         try {
-          console.log(req.body);
+          // console.log(req.body);
           await productmodelobj.addUser(req.body);
-          res.redirect('/');
+          res.redirect('/Ride');
         } catch (error) {
           console.error(error);
           res.status(500).send("Error adding user");
@@ -36,7 +34,7 @@ export default class PageController{
       }
       async signin(req, res) {
         try {
-          console.log(req.body);
+          // console.log(req.body);
           const user = await productmodelobj.findUser(req.body);
           if (!user) {
             error="User not found";
@@ -53,7 +51,7 @@ export default class PageController{
           )
           res.cookie('jwtToken',token);
           }
-          res.redirect('/');
+          res.redirect('/Ride');
         } catch (error) {
           console.error(error);
           res.status(404).send("User not found");

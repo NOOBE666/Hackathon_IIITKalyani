@@ -172,9 +172,31 @@ p{
     background: #000;
     color: white;
     height: 75vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 50px;
+    padding-bottom: 5px;
+}
+.categorieslist{
+    display: flex;;
+    justify-content: space-evenly;
 }
 .socials{
     display: flex;
+    justify-content: space-around;
+}
+.card{
+    background: #000;
+    color: white;
+}
+.list-group{
+    background: #000;
+    color: white;
+}
+.list-group-item{
+    background: #000;
+    color: white;
 }
 .no{
     color: white;

@@ -95,7 +95,7 @@ iframe{
     width: 90%;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-around;
     border: 1px solid black;
     border-radius: 10px;
 }
@@ -107,6 +107,8 @@ input{
     border-radius: 25px;
     border: 0px;
     font-size: medium;
+    /* line-height: 20px; */
+    line-height: normal;
 }
 input:focus{
     outline: none;
