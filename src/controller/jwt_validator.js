@@ -1,10 +1,12 @@
-import jwt from 'jsonwebtoken';
-
-export const jwt_validator= (req,res)=>{
+import jwt from 'jsonwebtoken'
+export const jwt_validator= (req,res,next)=>{
     const token=req.cookies.jwtToken;
-    const payload = jwt.verify(token,process.env.SECRET_KEY);
-    if (payload) {
-        return true;
+    //  console.log(token);
+    if (token) {
+        var payload = jwt.verify(token,process.env.SECRET_KEY);
+    }
+    if (!payload) {
+        res.clearCookie('jwtToken');
     } 
-    return false;
+    next();
 }

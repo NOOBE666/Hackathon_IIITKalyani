@@ -20,9 +20,7 @@
         <div class="buttons">
           <!-- <a href="#" class="signin">Sign In</a> -->
           <!-- <a href="#" class="signup">Register</a> -->
-          <a href="#" class="open_form"><span>Register</span></a>
-          
-
+          <span class="open_form">Register</span>
         </div>
       </nav>
     </header>
@@ -78,14 +76,14 @@
                       <button class="sign_up">Sign Up</button>
                   </div>
 
-                  <form action="#" class="form sign_in_form">
+                  <form action="/Business/businesssignin" class="form sign_in_form" method="post">
                       <div class="input_container">
-                          <input type="email" name="" id="" placeholder="Enter phone number or email" required>
+                          <input type="email" name="email" id="" placeholder="Enter phone number or email" required>
                           <i class="fas fa-user-circle"></i>
                       </div>
 
                       <div class="input_container">
-                          <input type="password" name="" id="" placeholder="Password" class="pass" required>
+                          <input type="password" name="password" id="" placeholder="Password" class="pass" required>
                           <i class="fas fa-lock"></i>
                           <i class="fas fa-eye eye"></i>
                       </div>
@@ -98,29 +96,29 @@
                           <a href="#" class="text">Forgot Password</a>
                       </div>
 
-                      <button>Sign In</button>
+                      <button type="submit">Sign In</button>
                   </form>
 
-                  <form action="#" class="form sign_up_form">
+                  <form action="/Business/businesssignup" class="form sign_up_form" method="post">
                       <div class="input_container">
-                          <input type="email" name="" id="" placeholder="Enter phone number" required>
+                          <input type="number" name="number" id="" placeholder="Enter phone number" required>
                             <i class="fas fa-phone-alt"></i>
                       </div>
                       <div class="input_container">
-                          <input type="email" name="" id="" placeholder="Enter Email" required>
+                          <input type="email" name="email" id="" placeholder="Enter Email" required>
                           <i class="fa-solid fa-envelope"></i>
                       </div>
                       <div class="input_container">
-                          <input type="email" name="" id="" placeholder="Bus Number" required>
+                          <input type="text" name="busnumber" id="" placeholder="Bus Number" required>
                           <i class="fa-solid fa-bus"></i>
                       </div>
                       <div class="input_container">
-                          <input type="email" name="" id="" placeholder="Bus Time" required>
+                          <input type="text" name="bustime" id="" placeholder="Bus Time" required>
                           <i class="fa-solid fa-clock"></i>
                       </div>
 
                       <div class="input_container">
-                          <input type="password" name="" id="" placeholder="Password" class="pass1" required>
+                          <input type="password" name="password" id="" placeholder="Password" class="pass1" required>
                           <i class="fas fa-lock"></i>
                           <i class="fas fa-eye eye eye1"></i>
                       </div>
@@ -131,15 +129,15 @@
                       </div>
 
 
-                      <div class="remember">
+                      <!-- <div class="remember">
                           <div class="checkBox">
                               <input type="checkbox" name="" id="">
                               <span class="rememberTxt">Remember me</span>
                           </div>
                           <a href="#" class="text">Forgot Password</a>
-                      </div>
+                      </div> -->
 
-                      <button>Sign Up</button>
+                      <button type="submit">Sign Up</button>
                   </form>
                   
               </div>
