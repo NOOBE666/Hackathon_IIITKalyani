@@ -6,7 +6,8 @@ import jwt from 'jsonwebtoken';
 const business_obj= new Business();
 export default class business{
    dashboard(req,res){
-        res.render('go_live');
+        const API_KEY=process.env.GOOGLE_MAPS_API;
+        res.render('go_live',{API_KEY:API_KEY});
    }
    async add_user(req,res){
         const details=req.body;
