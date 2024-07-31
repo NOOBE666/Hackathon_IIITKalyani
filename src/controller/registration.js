@@ -4,11 +4,28 @@ import jwt from 'jsonwebtoken';
 
 
 const business_obj= new Business();
-class business{
+export default class business{
+   dashboard(req,res){
+        res.render('go_live');
+   }
    async add_user(req,res){
         const details=req.body;
+        // console.log(details);
         try {
-           await business_obj.addUser(details); 
+          const user = await business_obj.addUser(details); 
+          console.log(user);
+           const token=jwt.sign({
+            userID:user._id,
+            email:user.email,
+          },
+          process.env.SECRET_KEY,
+          {
+            expiresIn:'1h',
+          }
+        )
+        res.cookie('jwtToken',token);
+        const id=user._id;
+        res.redirect(`/Business/go_live/${id}`);
         } catch (error) {
             console.log(error);
         }
@@ -30,13 +47,12 @@ class business{
                   expiresIn:'1h',
                 }
               )
+              const id= user._id;
               res.cookie('jwtToken',token);
+              res.redirect(`/Business/go_live/${id}`);
               }
-              res.redirect('/dashboard');
             } catch (error) {
             console.log(error);
         }
     }
 }
-
-export default business;

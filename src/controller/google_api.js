@@ -19,7 +19,7 @@ directionsDisplay.setMap(map);
 //   }
 // })
 
-function calcRoute() {
+async function calcRoute() {
   var start;
   if(location){
     start=location;
@@ -50,11 +50,11 @@ function calcRoute() {
           //show error message
       }
   });
-  driverlocation(map);
+  await driverlocation(map);
 
 }
 var options = {
-  types: ['airport','hospital']
+  types: '*'
 }
 
 var input1 = document.getElementById("from");
@@ -63,17 +63,22 @@ var autocomplete1 = new google.maps.places.Autocomplete(input1, options);
 var input2 = document.getElementById("to");
 var autocomplete2 = new google.maps.places.Autocomplete(input2, options);
 
-function driverlocation(map){
-  var driver_location={lat:22.572645,lng: 88.363892};
-  var customIcon={
-    url: 'https://png.pngtree.com/png-clipart/20220824/ourmid/pngtree-school-bus-top-view-transparent-png-image_6121877.png',
-    scaledSize: new google.maps.Size(50, 50)
-  }
-  const marker=new google.maps.Marker({
-    position:driver_location,
-    map:map,
-    icon:customIcon
-  })
+async function driverlocation(map){
+  setInterval(async ()=>{
+    await fetch(`http://localhost:5502/Business/getlocation/66a98601b64bc1315ef823e3`,{
+      method:'GET',
+   }).then(response=>{return response.json()}).then(data=>{
+    var customIcon={
+      url: 'https://png.pngtree.com/png-clipart/20220824/ourmid/pngtree-school-bus-top-view-transparent-png-image_6121877.png',
+      scaledSize: new google.maps.Size(50, 50)
+    }
+    const marker=new google.maps.Marker({
+      position:data,
+      map:map,
+      icon:customIcon
+    })
+   });
+  },3000);
 }
 function removecookies() {
   document.cookie.jwtToken='';

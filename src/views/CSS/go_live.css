@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.screen1{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: #000;
+    transition-duration: 3s;
+    z-index: 99;
+}
+.screen1.active{
+    z-index: -1;
+}
+.screen{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+}
+.container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(0rem);
+    transition-duration: 3s;
+    z-index: 99;
+    position: relative;
+    /* margin-left: 50%; */
+}
+.golive{
+    background-color: rgb(243, 241, 241);
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.golive:hover{
+    cursor: pointer;
+}
+.map{
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    position: absolute;
+}
+.container.active{
+    transform: translateX(-60rem);
+}

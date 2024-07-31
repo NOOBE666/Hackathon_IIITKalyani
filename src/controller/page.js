@@ -17,12 +17,13 @@ export default class PageController{
         res.render('business');
     }
     async signup(req, res) {
+      // console.log(req.body)
         const user=await productmodelobj.addUser(req.body);
         if(user){
         try {
-          console.log(req.body);
+          // console.log(req.body);
           await productmodelobj.addUser(req.body);
-          res.redirect('/');
+          res.redirect('/Ride');
         } catch (error) {
           console.error(error);
           res.status(500).send("Error adding user");
@@ -33,7 +34,7 @@ export default class PageController{
       }
       async signin(req, res) {
         try {
-          console.log(req.body);
+          // console.log(req.body);
           const user = await productmodelobj.findUser(req.body);
           if (!user) {
             error="User not found";
@@ -50,7 +51,7 @@ export default class PageController{
           )
           res.cookie('jwtToken',token);
           }
-          res.redirect('/');
+          res.redirect('/Ride');
         } catch (error) {
           console.error(error);
           res.status(404).send("User not found");

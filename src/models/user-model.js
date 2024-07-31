@@ -7,11 +7,14 @@ class ProductModel{
     // Adding a new user
   async addUser(userDetails){
     try {
+        console.log(userDetails)
         const usersisPresent= await User.findOne(userDetails);
+        console.log(usersisPresent)
         if (!usersisPresent) {
             const new_User= new User(userDetails);
             const savedUser=await new_User.save();
-            console.log("User saved");
+            console.log(savedUser);
+            return savedUser;
         }
         else{
             console.log("User present");

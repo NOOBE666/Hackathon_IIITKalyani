@@ -12,6 +12,7 @@ class Business{
                 const user=new businessUser(businessdetails);
                 const saved_user= await user.save();
                 console.log("New user saved");
+                return saved_user;
             }
             else{
                 console.log("User already present");

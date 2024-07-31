@@ -51,5 +51,9 @@ export const businessSchema= new mongoose.Schema({
         type:String,
         required:true,
         unique:true
+    },
+    location:{
+        lat:{type:Number,required:false},
+        lng:{type:Number,required:false}
     }
 })
