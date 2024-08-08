@@ -1,58 +1,47 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
-.screen1{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+html{
+    width: 100vw;
+    height: 100vh;
+}
+body{
     width: 100%;
     height: 100%;
-    top: 0;
-    background: #000;
-    transition-duration: 3s;
-    z-index: 99;
 }
-.screen1.active{
-    z-index: -1;
-}
-.screen{
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-}
-.container{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateX(0rem);
-    transition-duration: 3s;
-    z-index: 99;
-    position: relative;
-    /* margin-left: 50%; */
-}
-.golive{
-    background-color: rgb(243, 241, 241);
-    height: 20rem;
-    width: 20rem;
-    border-radius: 50%;
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.golive:hover{
-    cursor: pointer;
+
+main{
+    width: 100%;
+    height: 86%;
 }
 .map{
     width: 100%;
-    height: 100%;
-    z-index: 10;
+    height: 90%;
     position: absolute;
 }
-.container.active{
-    transform: translateX(-60rem);
+.navigation{
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.screen{
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    z-index: 99;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.screen.active{
+    transform: translateX(-100rem);
+    transition-duration: 5s;
 }

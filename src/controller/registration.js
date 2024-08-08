@@ -5,9 +5,16 @@ import jwt from 'jsonwebtoken';
 
 const business_obj= new Business();
 export default class business{
-   dashboard(req,res){
+   golive(req,res){
+        const id=req.params._id;
         const API_KEY=process.env.GOOGLE_MAPS_API;
-        res.render('go_live',{API_KEY:API_KEY});
+        res.render('go_live',{API_KEY:API_KEY,id:id});
+   }
+   async dashboard(req,res){
+    const id=req.params._id;
+        const list= await business_obj.getstations(id);
+        // console.log(list);
+        res.render('dashboard',{list:list,id:id});
    }
    async add_user(req,res){
         const details=req.body;
@@ -26,7 +33,8 @@ export default class business{
         )
         res.cookie('jwtToken',token);
         const id=user._id;
-        res.redirect(`/Business/go_live/${id}`);
+        res.cookie('id',id)
+        res.redirect(`/Business/${id}/dashboard`);
         } catch (error) {
             console.log(error);
         }
@@ -36,7 +44,8 @@ export default class business{
         try {
             const user=await business_obj.findUser(given_deatils);
             if (!user) {
-                error="User not found";
+                // error="User not found";
+                res.redirect('/Business');
               }
               else{
                 const token=jwt.sign({
@@ -50,10 +59,24 @@ export default class business{
               )
               const id= user._id;
               res.cookie('jwtToken',token);
-              res.redirect(`/Business/go_live/${id}`);
+              res.cookie('id',id)
+              res.redirect(`/Business/${id}/dashboard`);
               }
             } catch (error) {
             console.log(error);
         }
+    }
+    async addstations(req,res){
+      const id=req.params._id;
+      const user= await business_obj.findUser({_id:id});
+      const station=req.body.Station;
+      await business_obj.addstation(station,user);
+      res.redirect(`/Business/${id}/dashboard`)
+  }
+    async deletestations(req,res){
+      const id=req.params._id;
+      const index=req.params.id;
+      const station= await business_obj.deletestation(id,index);
+      res.redirect(`/Business/${id}/dashboard`);
     }
 }

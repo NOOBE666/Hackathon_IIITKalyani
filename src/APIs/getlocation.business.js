@@ -8,5 +8,5 @@ export const getlocation_business=async (req,res)=>{
     const user= await businessUser.findById(id);
     const location=user.location;
     // console.log(location);
-    res.json(location);
+    res.send(location);
 }

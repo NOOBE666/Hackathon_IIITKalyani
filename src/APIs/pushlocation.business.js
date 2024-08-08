@@ -7,6 +7,7 @@ const businessUser= mongoose.model('Business',businessSchema);
 
 export const pushlocation=async (req,res)=>{
     const location=req.body;
+    console.log(location)
     const id=req.params.id;
     const user= await businessUser.findById(id);
     if (!user) {

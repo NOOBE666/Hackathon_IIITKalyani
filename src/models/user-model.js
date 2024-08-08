@@ -8,12 +8,12 @@ class ProductModel{
   async addUser(userDetails){
     try {
         console.log(userDetails)
-        const usersisPresent= await User.findOne(userDetails);
-        console.log(usersisPresent)
+        const usersisPresent= await this.findUser(userDetails);
+        // console.log(usersisPresent)
         if (!usersisPresent) {
             const new_User= new User(userDetails);
             const savedUser=await new_User.save();
-            console.log(savedUser);
+            // console.log(savedUser);
             return savedUser;
         }
         else{
@@ -26,12 +26,12 @@ class ProductModel{
   //finding users
   async findUser(userDetails){
     try {
-        const users= await User.findOne(userDetails);
+        const users = await User.findOne(userDetails);
         if (users) {
             return users;
         }
         else{
-            console.log("User not found");
+            return false;
         }
     } catch (error) {
         console.log(error);

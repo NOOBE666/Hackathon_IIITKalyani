@@ -8,16 +8,15 @@
 </head>
 
 <body>
-    <div class="screen">
-        <div class="map" id="map"></div>
-        <div class="screen1" id="screen1">
-            <div class="container" onclick="getlocation()" id="container">
-                <div class="golive">
-                    Go Live
-                </div>
-            </div>
+    <nav class="navigation">
+        <div class="disconnect" id="disconnect">disconnect button</div>
+    </nav>
+    <main>
+        <div class="screen" id="screen">
+            <div class="button" id="button" onclick="getlocation()">GoLive</div>
         </div>
-    </div>
+        <div id="map" class="map"></div>
+    </main>
     <script src="/javascript/location.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=<%=API_KEY%>&libraries=places"></script>
     <script src="/javascript/render.map.js"></script>
