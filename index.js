@@ -21,7 +21,7 @@ server.use(cors());
 server.use('/Business',routes);
 configDotenv();
 let pages=new PageController();
-server.get('/',jwt_validator,pages.homerender)
+server.get('/',pages.homerender)
 server.get('/Ride',jwt_validator,pages.riderender)
 server.get('/About',jwt_validator,pages.aboutrender)
 

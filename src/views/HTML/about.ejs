@@ -26,7 +26,7 @@
         <div class="heading">
             <h1>About Us</h1>
         </div>
-        <div class="container">
+        <div class="hero-container">
             <div class="hero-content">
                 <h4>Planning your next trip? We take the stress out of bus travel.</h4>
                 <p>Book tickets anytime, anywhere .No more waiting in lines!! Search, compare, and book bus tickets in just a few clicks, 24/7.
@@ -40,6 +40,64 @@
             </div>
         </div>
     </section>
-    
+    <div class="container">
+        <h1>FAQ</h1>
+
+        <div class="faq-section">
+            <h2>General information</h2>
+            <div class="faq-item">
+                <button onclick="toggleAnswer(this)">First Question</button>
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, aut in iste ducimus inventore libero minus autem magni earum sapiente. Recusandae at soluta velit. A optio corporis sunt voluptatem delectus.</div>
+            </div>
+            <div class="faq-item">
+                <button onclick="toggleAnswer(this)">Second Question</button>
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, corporis, voluptas sed iste dolor nulla incidunt unde nostrum vero amet, vitae assumenda? Tempore repellendus laudantium illum exercitationem unde obcaecati facilis.</div>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2>Facilities</h2>
+            <div class="faq-item">
+                <button onclick="toggleAnswer(this)">Third Question</button>
+                <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat iste, atque laborum recusandae excepturi consequuntur adipisci magni voluptatem error eius officiis perspiciatis cum, aliquam dicta dignissimos deleniti. Sed, ipsa eveniet.</div>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2>Report Issue</h2>
+            <div class="report-item">
+                <form action="" method="POST">
+                    <div>
+                        <label for="report-issue">What problem are you facing?*</label>
+                        <textarea name="report-issue" id="report-issue" cols="50" rows="10" required></textarea>
+                    </div>
+                    <div>
+                        <label for="name">Name: *</label>
+                        <input type="text" name="name" id="name" required>
+                        <label for="email">Email: *</label>
+                        <input type="email" name="email" id="email" required>
+                        <label for="phone">Phone</label>
+                        <input type="tel" name="phone" id="phone">
+                        <label>* are required fields</label>
+                    </div>
+                    <div>
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function toggleAnswer(button) {
+            const answer = button.nextElementSibling;
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+            } else {
+                answer.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>

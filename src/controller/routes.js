@@ -14,9 +14,15 @@ routes.route('/').get(pages.business)
 routes.post('/businesssignup',business_obj.add_user)
 routes.route('/businesssignin').post(business_obj.find_user);
 
-routes.route('/go_live/:id').get(business_obj.dashboard);
+routes.route('/:_id/go_live').get(business_obj.golive);
+
+routes.route('/:_id/dashboard').get(business_obj.dashboard);
+
+routes.route('/:_id/addstations').post(business_obj.addstations);
 
 routes.route('/locationupdate/:id').post(pushlocation);
+
+routes.route('/:id/deletestation/:_id').get(business_obj.deletestations);
 
 routes.route('/getlocation/:id').get(getlocation_business);
 
